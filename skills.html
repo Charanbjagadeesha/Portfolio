@@ -1,0 +1,281 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Skills
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: 'Poppins', sans-serif;
+            background-color: black;
+            color: white;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .skill {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #1a1a1a;
+            padding: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+            position: relative;
+        }
+
+        .skill img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+            transition: transform 0.3s ease-in-out;
+            border-radius: 50%;
+        }
+
+        .skill:hover img {
+            transform: scale(1.5);
+        }
+
+        .skill:hover {
+            transform: scale(1.1);
+            background-color: #333;
+        }
+
+        .tooltip {
+            display: none;
+            text-align: center;
+            font-size: 16px;
+            position: absolute;
+            top: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            white-space: nowrap;
+            z-index: 10;
+        }
+
+        .skill:hover .tooltip {
+            display: block;
+        }
+
+        .cloud {
+            margin-top: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            display: none;
+            white-space: nowrap;
+        }
+
+        h2 {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+            margin-top: 20px;
+            background: linear-gradient(to right, rgb(173, 216, 230), rgb(255, 182, 193));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(to right, rgb(173, 216, 230), rgb(255, 182, 193));
+            bottom: 0;
+            left: 0;
+            transform: scaleX(0);
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+        }
+
+        h2:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+        @media (max-width: 640px) {
+            .text-[12px] {
+                font-size: 12px;
+            }
+            .text-[10px] {
+                font-size: 10px;
+            }
+            .tooltip {
+                top: -60px;
+                font-size: 14px;
+                padding: 8px;
+                white-space: normal;
+                width: 100px;
+            }
+            .cloud {
+                position: fixed;
+                bottom: 20px;
+                left: 50%;
+                transform: translateX(-50%);
+                display: block;
+            }
+        }
+
+        footer {
+            margin-top: auto;
+        }
+  </style>
+ </head>
+ <body class="bg-black text-white">
+  <header class="bg-black shadow-md">
+   <div class="container mx-auto p-4 flex justify-between items-center">
+    <h1 class="text-2xl font-bold">
+     Charan B Jagadeesha
+    </h1>
+    <nav>
+     <ul class="flex space-x-4">
+      <li>
+       <a class="hover:text-white/40" href="index.html">
+        Home
+       </a>
+      </li>
+      <li>
+       <a class="hover:text-white/40" href="about.html">
+        About
+       </a>
+      </li>
+      <li>
+       <a class="hover:text-white/40" href="projects.html">
+        Projects
+       </a>
+      </li>
+      <li>
+       <a class="hover:text-white/40" href="experience.html">
+        Experience
+       </a>
+      </li>
+      <li>
+       <a class="hover:text-white/40" href="certifications.html">
+        Certifications
+       </a>
+      </li>
+      <li>
+       <a class="hover:text-white/40" href="contact.html">
+        Contact
+       </a>
+      </li>
+     </ul>
+    </nav>
+   </div>
+  </header>
+  <div class="content">
+   <h2 class="text-3xl font-bold text-center mb-12">
+    Skills
+   </h2>
+   <div class="container">
+    <div class="skill" onmouseover="showTooltip('Python: Skilled in Python')">
+     <img alt="Python icon" src="python.png"/>
+    </div>
+    <div class="skill" onmouseover="showTooltip('HTML: Expert in creating responsive and accessible web pages.')">
+     <img alt="HTML icon" src="htmlimage.jpeg"/>
+    </div>
+    <div class="skill" onmouseover="showTooltip('CSS: Skilled in styling web pages with CSS.')">
+     <img alt="CSS icon" src="cssimage.jpeg"/>
+    </div>
+    <div class="skill" onmouseover="showTooltip('JavaScript: Experienced in building interactive web applications.')">
+     <img alt="JavaScript icon" src="js.webp"/>
+    </div>
+    <div class="skill" onmouseover="showTooltip('SQL: skilled in database management and querying using SQL.')">
+     <img alt="SQL icon" src="sqlimage.webp"/>
+    </div>
+    <div class="skill" onmouseover="showTooltip('Django: Experienced in building web applications using Django framework.')">
+     <img alt="Django icon" src="django.png"/>
+    </div>
+    <div class="skill" onmouseover="showTooltip('Excel: Skilled in data analysis and visualization using Excel.')">
+     <img alt="Excel icon" src="excel.png"/>
+    </div>
+    <div class="skill" onmouseover="showTooltip('Power BI: Proficient in creating interactive dashboards with Power BI.')">
+     <img alt="Power BI icon" src="powerbi.png"/>
+    </div>
+    <div class="skill" onmouseover="showTooltip('Tableau: Experienced in data visualization using Tableau.')">
+     <img alt="Tableau icon" src="tableau.png"/>
+    </div>
+    <div class="skill" onmouseover="showTooltip('Data Analysis: Good knowledge about analysis of data.')">
+     <img alt="Data Analysis icon" src="data analysis.png"/>
+    </div>
+    <div class="skill" onmouseover="showTooltip('Data Science')">
+     <img alt="Data Science icon" src="datascience.png"/>
+    </div>
+    <div class="skill" onmouseover="showTooltip('Machine Learning: Experienced in building machine learning models.')">
+     <img alt="Machine Learning icon" src="ml.webp"/>
+    </div>
+    <div class="skill" onmouseover="showTooltip(' Natural Language Processing')">
+     <img alt="NLP icon" src="nlp.webp"/>
+    </div>
+    <div class="skill" onmouseover="showTooltip('Artificial Intelligence')">
+     <img alt="AI icon" src="ai.webp"/>
+    </div>
+    <div class="skill" onmouseover="showTooltip('Augmented Reality')">
+     <img alt="Augmented Reality icon" src="ar.jpg"/>
+    </div>
+    <div class="skill" onmouseover="showTooltip('Cloud Computing: Very good knowledge in deploying and managing applications on cloud platforms.')">
+     <img alt="Cloud Computing icon" src="cc.jpg"/>
+    </div>
+   </div>
+   <div class="cloud" id="cloud">
+   </div>
+  </div>
+  <footer class="bg-gray-800 text-white py-4">
+   <div class="container mx-auto text-center">
+  
+   </div>
+  </footer>
+  <script>
+   function showTooltip(text) {
+            const cloud = document.getElementById('cloud');
+            cloud.innerText = text;
+            cloud.style.display = 'block';
+        }
+
+        function hideTooltip() {
+            const cloud = document.getElementById('cloud');
+            cloud.style.display = 'none';
+        }
+
+        document.querySelectorAll('.skill').forEach(skill => {
+            skill.addEventListener('mouseover', function() {
+                const tooltipText = this.querySelector('.tooltip') ? this.querySelector('.tooltip').innerText : this.getAttribute('onmouseover').match(/'([^']+)'/)[1];
+                showTooltip(tooltipText);
+            });
+            skill.addEventListener('mouseout', hideTooltip);
+        });
+  </script>
+ </body>
+</html>

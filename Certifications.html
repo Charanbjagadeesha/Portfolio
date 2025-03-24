@@ -1,0 +1,199 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Certifications
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: 'Poppins', sans-serif;
+            background-color: black;
+            color: white;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .background-animated {
+            background: linear-gradient(270deg, #1a1a1a, #333, #1a1a1a);
+            background-size: 600% 600%;
+            animation: backgroundAnimation 10s ease infinite;
+        }
+
+        @keyframes backgroundAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .animate-hero-enter {
+            animation: hero-enter 0.5s ease-out forwards;
+        }
+
+        @keyframes hero-enter {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .zoom-in {
+            animation: zoomIn 1.5s ease-in-out;
+        }
+
+        @keyframes zoomIn {
+            from {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .underline-animation {
+            position: relative;
+            display: inline-block;
+        }
+
+        .underline-animation::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            bottom: 0;
+            left: 0;
+            background: linear-gradient(to right, rgb(173, 216, 230), rgb(255, 182, 193));
+            transform: scaleX(0);
+            transform-origin: bottom right;
+            transition: transform 0.5s ease-out;
+        }
+
+        .underline-animation:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+        .gradient-text {
+            background: linear-gradient(to right, rgb(173, 216, 230), rgb(255, 182, 193));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+  </style>
+ </head>
+ <body class="bg-black text-white background-animated">
+  <header class="bg-black shadow-md">
+   <div class="container mx-auto p-4 flex justify-between items-center">
+    <h1 class="text-2xl font-bold">
+     Charan B Jagadeesha
+    </h1>
+    <nav>
+     <ul class="flex space-x-4">
+      <li>
+       <a class="hover:text-white/40" href="index.html">
+        Home
+       </a>
+      </li>
+      <li>
+       <a class="hover:text-white/40" href="about.html">
+        About
+       </a>
+      </li>
+      <li>
+       <a class="hover:text-white/40" href="skills.html">
+        Skills
+       </a>
+      </li>
+      <li>
+       <a class="hover:text-white/40" href="projects.html">
+        Projects
+       </a>
+      </li>
+      <li>
+       <a class="hover:text-white/40" href="experience.html">
+        Experience
+       </a>
+      </li>
+      <li>
+       <a class="hover:text-white/40" href="contact.html">
+        Contact
+       </a>
+      </li>
+     </ul>
+    </nav>
+   </div>
+  </header>
+  <section class="flex-grow flex items-center justify-center text-center py-20 fade-in animate-hero-enter" id="certifications">
+   <div class="container mx-auto px-4">
+    <h2 class="text-4xl font-bold mb-4 zoom-in underline-animation gradient-text">
+     Certifications
+    </h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+     <div class="bg-gray-800 p-6 rounded-lg shadow-lg zoom-in">
+      <img alt="Certification 1: Detailed description of the certification image" class="w-full h-48 object-cover mb-4 rounded-lg" src="powerbi.certification.jpeg"/>
+      <h3 class="text-2xl font-bold mb-2">
+       POWER BI
+      </h3>
+      <p class="text-gray-400">
+       By Office Master
+      </p>
+     </div>
+     <div class="bg-gray-800 p-6 rounded-lg shadow-lg zoom-in">
+      <img alt="Certification 2: Detailed description of the certification image" class="w-full h-48 object-cover mb-4 rounded-lg" src="https://www.google.com/url?sa=i&amp;url=https%3A%2F%2Fwww.etrainindia.com%2Fproduct%2Fibm-data-analysis-with-python-certification-course%2F&amp;psig=AOvVaw0WFWpWgj1XCwHMxQwr88Gi&amp;ust=1742724212466000&amp;source=images&amp;cd=vfe&amp;opi=89978449&amp;ved=0CBQQjRxqFwoTCLjt_963nYwDFQAAAAAdAAAAABAE"/>
+      <h3 class="text-2xl font-bold mb-2">
+       Data Analysis
+      </h3>
+      <p class="text-gray-400">
+       By IBM
+      </p>
+     </div>
+     <div class="bg-gray-800 p-6 rounded-lg shadow-lg zoom-in">
+      <img alt="Certification 3: Detailed description of the certification image" class="w-full h-48 object-cover mb-4 rounded-lg" src="https://www.google.com/url?sa=i&amp;url=https%3A%2F%2Fwww.simplilearn.com%2Fdata-science-free-course-for-beginners-skillup&amp;psig=AOvVaw1wk__s1KK4RPUOjX5sf2Zi&amp;ust=1742724260289000&amp;source=images&amp;cd=vfe&amp;opi=89978449&amp;ved=0CBQQjRxqFwoTCIDSzf23nYwDFQAAAAAdAAAAABAE"/>
+      <h3 class="text-2xl font-bold mb-2">
+       Data Science
+      </h3>
+      <p class="text-gray-400">
+       By Simplilearn
+      </p>
+     </div>
+    </div>
+   </div>
+  </section>
+  <footer class="bg-gray-800 text-white py-4">
+   <div class="container mx-auto text-center">
+   
+   </div>
+  </footer>
+ </body>
+</html>
